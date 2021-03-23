@@ -9,7 +9,16 @@
 // Hint: Utilize the string prototype method charCodeAt and generic method fromCharCode
 
 function letterChecker(str) {
+  let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let startingPoint = alphabet.indexOf(str[0]);
 
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== alphabet[startingPoint + i]) {
+            return alphabet[startingPoint + i];
+        }
+    }
+    let none ='no missing letters'
+    return none
 }
 
 
